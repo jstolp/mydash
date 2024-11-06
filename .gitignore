@@ -1,4 +1,10 @@
 # Gitignore common files: Go, NodeJs/JavaScript
+
+# custom
+
+.*
+stolpsys.com/public/*
+stolpsys.com/themes/*
 # Golang
 
 *.exe
