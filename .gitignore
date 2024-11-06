@@ -2,7 +2,9 @@
 
 # custom
 
+
 .*
+!.github/
 stolpsys.com/public/*
 stolpsys.com/themes/*
 # Golang
