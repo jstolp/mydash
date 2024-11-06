@@ -14,6 +14,8 @@ help: # Show help for each of the Makefile recipes.
 all-versions: # Show all versions of tools used in this project.
 	@docker --version
 	@hugo version
+	@echo "\nCaddy version:"
+	@caddy version
 	@echo "\nNPM version:"
 	@npm --version
 	@echo "\nNode.js version:"
@@ -27,6 +29,15 @@ setup-hugo: # Setup tools required for local development - MacOSX.
 	brew install hugo # MacOS only
 	hugo version
 	#git submodule update --init --recursive --remote
+
+.PHONY: caddy-run # Run the Caddy server from /caddy/.
+caddy-run:
+	echo "open caddy config"
+	open http://localhost:2019/config/
+	echo "open caddy site"
+	open http://localhost:2015/
+	echo "run caddy"
+	caddy run --config caddy/Caddyfile
 
 .PHONY: stolpsys-newpost
 stolpsys-newpost: # Create a new post.
