@@ -4,7 +4,9 @@
 
 
 .*
-!.github/
+!.github/*
+!.secrets.baseline
+
 stolpsys.com/public/*
 stolpsys.com/themes/*
 # Golang
