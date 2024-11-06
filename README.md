@@ -1,13 +1,20 @@
 # MyDash - My Personal Dashboard
-My Personal Dashboard - Like my Old Skool [Weather Dashboard](https://stolpsys.com/knmi/) and more.
+
+My Personal DevBlog
+
+[Go to the GitHubPages Hosted new DevBlog!!!](https://jstolp.github.io/mydash/)
+
 
 ## Changelog
+
+2024-11-06: First commit, initial Hugo Dev Blog + Caddyfile
 
 ## Inspiration
 
 Getting started with Caddy, Svelte and PHP. Awesome! 
 CI with Github Actions. CD with Docker.
 
+My Personal Dashboard - Like my Old Skool [Weather Dashboard](https://stolpsys.com/knmi/) and more.
 
 ## Stolpsys.com
 ```bash
