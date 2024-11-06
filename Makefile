@@ -11,7 +11,7 @@ help: # Show help for each of the Makefile recipes.
 	@grep -E '^[a-zA-Z0-9 -]+:.*#'  Makefile | sort | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
 
 .PHONY: all-versions
-all-versions:
+all-versions: # Show all versions of tools used in this project.
 	@docker --version
 	@hugo version
 	@echo "\nNPM version:"
@@ -34,8 +34,9 @@ stolpsys-newpost: # Create a new post.
 
 .PHONY: stolpsys-serve
 stolpsys-serve: # Serve the site locally for testing.
-	cd stolpsys.com; hugo server --baseURL "http://localhost:1313/" --buildDrafts -D -v --debug
 	open http://localhost:1313/
+	cd stolpsys.com; hugo server --baseURL "http://localhost:1313/" --buildDrafts -v --debug
+
 
 .PHONY: stolpsys-build # Build the site.
 stolpsys-build:
