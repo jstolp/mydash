@@ -1,0 +1,3 @@
+[submodule "stolpsys.com/themes/hugo-dusk"]
+	path = stolpsys.com/themes/hugo-dusk
+	url = https://github.com/gyorb/hugo-dusk
