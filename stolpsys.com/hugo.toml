@@ -1,10 +1,11 @@
 baseurl = "/"
-title = "My Dash Website - Static Hugo"
+title = "StolpSys.com"
 copyright = "Copyright StolpSyS.com (c) 2024, all rights reserved."
 canonifyurls = true
 languageCode = "en-US"
 pagination.pagerSize = 3
 theme = "hugo-dusk"
+contentDir = "content"
 
 googleAnalytics = ""
 disqusShortname = ""
@@ -22,8 +23,8 @@ SectionPagesMenu = "main"
 [[menu.main]]
   name = "Posts"
   weight = -120
-  identifier = "post"
-  url = "/post/"
+  identifier = "posts"
+  url = "/posts/"
 
 [[menu.main]]
   name = "Tags"

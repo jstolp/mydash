@@ -8,6 +8,12 @@ My Personal Dashboard - Like my Old Skool [Weather Dashboard](https://stolpsys.c
 Getting started with Caddy, Svelte and PHP. Awesome! 
 CI with Github Actions. CD with Docker.
 
+
+## Stolpsys.com
+```bash
+cd stolpsys.com/
+
+```
 ## Tech Stack
 
 DevOps:

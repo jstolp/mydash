@@ -10,20 +10,33 @@ help: # Show help for each of the Makefile recipes.
 	#
 	@grep -E '^[a-zA-Z0-9 -]+:.*#'  Makefile | sort | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
 
-.PHONY: setup
-setup: # Setup tools required for local development.
+.PHONY: all-versions
+all-versions:
+	@docker --version
+	@hugo version
+	@echo "\nNPM version:"
+	@npm --version
+	@echo "\nNode.js version:"
+	@node --version
+	@php --version
+	@go version
+	@echo "\n All versions... \n\n"
+
+.PHONY: setup-hugo
+setup-hugo: # Setup tools required for local development - MacOSX.
 	brew install hugo # MacOS only
 	hugo version
 	#git submodule update --init --recursive --remote
 
-.PHONY: newpost
-newpost: # Create a new post.
-	cd stolpsys.com; hugo new posts/my-first-post.md
+.PHONY: stolpsys-newpost
+stolpsys-newpost: # Create a new post.
+	cd stolpsys.com; hugo new content content/posts/my-new-post.md
 
-.PHONY: serve
-serve: # Serve the site locally for testing.
-	cd stolpsys.com; hugo server --baseURL "http://localhost/" --buildDrafts -v --debug
+.PHONY: stolpsys-serve
+stolpsys-serve: # Serve the site locally for testing.
+	cd stolpsys.com; hugo server --baseURL "http://localhost:1313/" --buildDrafts -D -v --debug
+	open http://localhost:1313/
 
-.PHONY: build # Build the site.
-build:
+.PHONY: stolpsys-build # Build the site.
+stolpsys-build:
 	cd stolpsys.com; hugo --minify
