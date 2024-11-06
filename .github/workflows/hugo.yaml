@@ -2,9 +2,10 @@ name: Deploy Hugo - StolpSyS Dev site to GH Pages
 
 on:
   # Runs on pushes targeting the default branch (main)
+  # only for files on stolpsys.com (GH Pages Dev Blog)
   push:
-    branches:
-      - main
+    branches: ['main']
+    paths: ['stolpsys.com/**']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
