@@ -39,16 +39,16 @@ caddy-run:
 	echo "run caddy"
 	caddy run --config caddy/Caddyfile
 
-.PHONY: stolpsys-newpost
-stolpsys-newpost: # Create a new post.
-	cd stolpsys.com; hugo new content content/posts/my-new-post.md
+.PHONY: blog-newpost
+blog-newpost: # Create a new post.
+	cd stolpsys.com-blog; hugo new content content/posts/my-new-post.md
 
-.PHONY: stolpsys-serve
-stolpsys-serve: # Serve the site locally for testing.
+.PHONY: blog-serve
+blog-serve: # Serve the site locally for testing.
 	open http://localhost:1313/
-	cd stolpsys.com; hugo server --baseURL "http://localhost:1313/" --buildDrafts -v --debug
+	cd stolpsys.com-blog; hugo server --baseURL "http://localhost:1313/" --buildDrafts -v --debug
 
 
-.PHONY: stolpsys-build # Build the site.
-stolpsys-build:
-	cd stolpsys.com; hugo --minify
+.PHONY: blog-build # Build the site.
+blog-build:
+	cd stolpsys.com-blog; hugo --minify

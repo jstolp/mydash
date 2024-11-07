@@ -5,7 +5,7 @@ on:
   # only for files on stolpsys.com (GH Pages Dev Blog)
   push:
     branches: ['main']
-    paths: ['stolpsys.com/**']
+    paths: [ '../../stolpsys.com-blog/**' ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -54,7 +54,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
         run: |
-          cd stolpsys.com/
+          cd stolpsys.com-blog/
           hugo \
             --gc \
             --minify \
@@ -62,7 +62,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./stolpsys.com/public
+          path: ./stolpsys.com-blog/public
 
   # Deployment job
   deploy:

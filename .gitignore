@@ -8,7 +8,7 @@
 !.github/*
 !.secrets.baseline
 
-stolpsys.com/public/*
+stolpsys.com-blog/public/*
 
 # Golang
 

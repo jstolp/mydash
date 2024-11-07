@@ -1,3 +1,6 @@
 [submodule "stolpsys.com/themes/hugo-dusk"]
-	path = stolpsys.com/themes/hugo-dusk
+	path = stolpsys.com-blog/themes/hugo-dusk/hugo-dusk
+	url = https://github.com/gyorb/hugo-dusk
+[submodule "stolpsys.com-blog/themes/hugo-dusk"]
+	path = stolpsys.com-blog/themes/hugo-dusk
 	url = https://github.com/gyorb/hugo-dusk
